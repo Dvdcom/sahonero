@@ -1,0 +1,22 @@
+{
+  "name": "sahonero",
+  "version": "1.0.0",
+  "description": "Pagina web dinamica para entrada de registros",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dvdcom/sahonero.git"
+  },
+  "author": "David Gutierrez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dvdcom/sahonero/issues"
+  },
+  "homepage": "https://github.com/Dvdcom/sahonero#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
