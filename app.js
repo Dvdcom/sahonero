@@ -6,6 +6,7 @@ const expressLayouts = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 
 app.set('view engine', 'ejs');
+app.set('layout', 'layouts/layout');
 app.use(expressLayouts);
 
 /* CAPAS DE MIDDLEWARES */
@@ -16,6 +17,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
+/* CAPA 2 RUTAS*/
+app.use(require('./routes/index'));
 
 /*CAPA 3 - para los 404 no existe */
 app.use((req, res, next) => {
