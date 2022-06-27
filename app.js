@@ -5,9 +5,9 @@ const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 
-app.set('view engine', 'ejs');
-app.set('layout', 'layouts/layout');
 app.use(expressLayouts);
+app.set('layout', './layouts/layout');
+app.set('view engine', 'ejs');
 
 /* CAPAS DE MIDDLEWARES */
 /*CAPA 1 - para las estaticas */
