@@ -5,9 +5,9 @@ const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 
-app.use(expressLayouts);
 app.set('layout', './layouts/layout');
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
 
 /* CAPAS DE MIDDLEWARES */
 /*CAPA 1 - para las estaticas */
@@ -19,6 +19,8 @@ app.use(methodOverride('_method'));
 
 /* CAPA 2 RUTAS*/
 app.use(require('./routes/index'));
+app.use(require('./routes/form-registros'));
+app.use(require('./routes/bienvenida'));
 
 /*CAPA 3 - para los 404 no existe */
 app.use((req, res, next) => {

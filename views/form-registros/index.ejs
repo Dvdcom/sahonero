@@ -1,0 +1,79 @@
+<div class="container-fluid text-center mt-5">
+    <h5 class="fw-bold">CREA UN REGISTRO</h5>
+</div>
+<div class="container-fluid mt-3">
+    <div class="row justify-content-center bg-dark text-light p-3">
+        <div class="col-10 col-sm-4 col-md-5 col-lg-4 col-xl-3">
+            <form action="#" method="#">
+                <div class="input-group mb-2">
+                    <label class="input-group-text" for="inputGroupSelect01">Tipo:</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected></option>
+                        <option value="1">Instalacion</option>
+                        <option value="2">Service</option>
+                        <option value="3">Solicitar datos</option>
+                    </select>
+                </div>
+
+                <label class="form-label">Complete la siguiente informacion:</label>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="ot"><i class="bi bi-info-circle"></i></span>
+                    <input type="text" class="form-control" placeholder="Orden de trabajo" aria-label="ot"
+                        aria-describedby="ot">
+                </div>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="nombre"><i class="bi bi-file-person"></i></span>
+                    <input type="text" class="form-control" placeholder="Nombre de Cliente" aria-label="nombre"
+                        aria-describedby="nombre">
+                </div>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="identificacion"><i class="bi bi-card-text"></i></span>
+                    <input type="text" class="form-control" placeholder="Identificacion" aria-label="identificacion"
+                        aria-describedby="identificacion">
+                </div>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="contrato"><i class="bi bi-file-earmark-medical"></i></span>
+                    <input type="text" class="form-control" placeholder="Contrato" aria-label="contrato"
+                        aria-describedby="contrato">
+                </div>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="direccion"><i class="bi bi-house-door"></i></span>
+                    <input type="text" class="form-control" placeholder="Direccion" aria-label="direccion"
+                        aria-describedby="direccion">
+                </div>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="telefono"><i class="bi bi-telephone"></i></span>
+                    <input type="text" class="form-control" placeholder="Telefono" aria-label="telefono"
+                        aria-describedby="telefono">
+                </div>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="equipoi" style="border: 1px solid green; background-color:lightgreen;"><i class="bi bi-router"></i></span>
+                    <input type="text" class="form-control" id="equipoi" placeholder="Equipo Instalado"
+                        aria-label="equipoi" aria-describedby="equipoi" style="border: 1px solid green; background-color:lightgreen;">
+                    <button type="button" class="btn btn-primary" style="display: inline-block;">+</button>
+                </div>
+
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="equipor" style="border: 1px solid crimson; background-color:lightpink;"><i class="bi bi-router-fill"></i></span>
+                    <input type="text" class="form-control" id="equipor" placeholder="Equipo Recuperado"
+                        aria-label="equipor" aria-describedby="equipor" style="border: 1px solid crimson; background-color:lightpink;">
+                    <button type="button" class="btn btn-primary" style="display: inline-block;">+</button>
+                </div>
+            </form>
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
