@@ -12,6 +12,9 @@
             min-height: 100vh;
             grid-template-rows: auto 1fr auto;
         }
+        .icon{
+            filter: grayscale(100%);
+        }
     </style>
 </head>
 <body>
@@ -19,7 +22,7 @@
         <%- include('../partials/nav-funciones') -%>
     </header>
     <main><%- body %></main>
-    <footer>
+    <footer class="bg-ligth">
         <%- include('../partials/footer') -%>    
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
