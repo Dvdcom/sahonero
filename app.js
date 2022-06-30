@@ -21,6 +21,7 @@ app.use(methodOverride('_method'));
 app.use(require('./routes/index'));
 app.use(require('./routes/form-registros'));
 app.use(require('./routes/bienvenida'));
+app.use(require('./routes/super-admin'));
 
 /*CAPA 3 - para los 404 no existe */
 app.use((req, res, next) => {
