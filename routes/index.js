@@ -15,19 +15,11 @@ router.post('/', (req, res) => {
             console.log('El usuario y/o la contraseña es incorrecta.');
             //res.send('El usuario y/o la contraseña es incorrecta.');
         } else {
-            req.session.user_id = results[0].id;
-            req.session.user_usuario = results[0].nombre;
+            //req.session.user_id = results[0].id;
+            //req.session.user_usuario = results[0].nombre;
             res.redirect('/bienvenida');
         }
 
-
-/*         if (results.length == 0 || !(await bcryptjs.compare(req.body.password, results[0].password))) {
-            res.send('El usuario y/o la contraseña es incorrecta.');
-        } else {
-            req.session.user_id = results[0].id;
-            req.session.user_usuario = results[0].nombre;
-            res.redirect('/bienvenida');
-        } */
     });
 });
 

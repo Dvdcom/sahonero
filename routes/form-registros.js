@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/form-registros', (req, res) => {
-    res.render('form-registros/index',{layout: './layouts/layout-navbar'});
-});
+const controller = require('../controllers/form-registros');
+
+//index
+router.get('/form-registros', controller.index);
+router.post('/form-registros/store', controller.store);
 
 module.exports = router;

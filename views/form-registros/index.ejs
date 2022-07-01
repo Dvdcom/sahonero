@@ -4,7 +4,8 @@
 <div class="container-fluid mt-3">
     <div class="row justify-content-center bg-dark text-light p-3">
         <div class="col-10 col-sm-4 col-md-5 col-lg-4 col-xl-3">
-            <form action="#" method="#">
+            
+            <form action="/form-registros/store" method="post">
                 <div class="input-group mb-2">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo:</label>
                     <select class="form-select" id="inputGroupSelect01">
@@ -19,61 +20,62 @@
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="ot"><i class="bi bi-info-circle"></i></span>
-                    <input type="text" class="form-control" placeholder="Orden de trabajo" aria-label="ot"
-                        aria-describedby="ot">
+                    <input type="text" id="ot" name="ot" class="form-control" placeholder="Orden de trabajo" aria-label="basic-addon1"
+                        aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="nombre"><i class="bi bi-file-person"></i></span>
-                    <input type="text" class="form-control" placeholder="Nombre de Cliente" aria-label="nombre"
-                        aria-describedby="nombre">
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de Cliente" aria-label="basic-addon1"
+                        aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="identificacion"><i class="bi bi-card-text"></i></span>
-                    <input type="text" class="form-control" placeholder="Identificacion" aria-label="identificacion"
-                        aria-describedby="identificacion">
+                    <input type="text" id="identificacion" name="identificacion" class="form-control" placeholder="Identificacion" aria-label="basic-addon1"
+                        aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="contrato"><i class="bi bi-file-earmark-medical"></i></span>
-                    <input type="text" class="form-control" placeholder="Contrato" aria-label="contrato"
-                        aria-describedby="contrato">
+                    <input type="text" id="contrato" name="contrato" class="form-control" placeholder="Contrato" aria-label="basic-addon1"
+                        aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="direccion"><i class="bi bi-house-door"></i></span>
-                    <input type="text" class="form-control" placeholder="Direccion" aria-label="direccion"
-                        aria-describedby="direccion">
+                    <input type="text" id="direccion" name="direccion" class="form-control" placeholder="Direccion" aria-label="basic-addon1"
+                        aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="telefono"><i class="bi bi-telephone"></i></span>
-                    <input type="text" class="form-control" placeholder="Telefono" aria-label="telefono"
-                        aria-describedby="telefono">
+                    <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Telefono" aria-label="basic-addon1"
+                        aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="equipoi" style="border: 1px solid green; background-color:lightgreen;"><i class="bi bi-router"></i></span>
-                    <input type="text" class="form-control" id="equipoi" placeholder="Equipo Instalado"
-                        aria-label="equipoi" aria-describedby="equipoi" style="border: 1px solid green; background-color:lightgreen;">
+                    <input type="text" class="form-control" id="equipoi" name="equipoi" placeholder="Equipo Instalado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1" style="border: 1px solid green; background-color:lightgreen;">
                     <button type="button" class="btn btn-primary" style="display: inline-block;">+</button>
                 </div>
 
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="equipor" style="border: 1px solid crimson; background-color:lightpink;"><i class="bi bi-router-fill"></i></span>
-                    <input type="text" class="form-control" id="equipor" placeholder="Equipo Recuperado"
-                        aria-label="equipor" aria-describedby="equipor" style="border: 1px solid crimson; background-color:lightpink;">
+                    <input type="text" class="form-control" id="equipor" name="equipor" placeholder="Equipo Recuperado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1" style="border: 1px solid crimson; background-color:lightpink;">
                     <button type="button" class="btn btn-primary" style="display: inline-block;">+</button>
                 </div>
-            </form>
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-3">
-                        <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-3">
+                            <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
+
         </div>
     </div>
 </div>
