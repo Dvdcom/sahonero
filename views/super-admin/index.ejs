@@ -2,32 +2,31 @@
     <div class="row justify-content-center p-5">
         <div class="col- col-sm-4 col-md-5 col-lg-4 col-xl-3">
             <h5>Crear usuario</h5>
-            <form action="#">
+            <form action="/super-admin/store" method="post">
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-                    <input type="text" id="usuario" class="form-control" placeholder="Nombre Usuario" aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Nombre Usuario">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-                    <input type="text" id="email" class="form-control" placeholder="Correo electronico" aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Correo electronico">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-shield-lock-fill"></i></span>
-                    <input type="text" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                    <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
                 </div>
-
                 <div class="input-group">
-                    <label class="input-group-text" for=""><i class="bi bi-robot"></i></label>
-                    <select class="form-select" aria-label="Filter select">
-                      <option selected><i class="bi bi-funnel"></i> Seleccione Rol</option>
-                      <option value="Usuario">Usuario</option>
-                      <option value="Admin">Admin</option>
-                      <option value="Super-Admin">Super-Admin</option>
+                    <label class="input-group-text" for="rol"><i class="bi bi-robot"></i></label>
+                    <select class="form-select" id="rol" name="rol" aria-label="Filter select">
+                    <option selected><i class="bi bi-funnel"></i> Seleccione Rol</option>
+                    <option value="Usuario">Usuario</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Super-Admin">Super-Admin</option>
                     </select>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <button type="submit" class="btn btn-primary mt-4">CREAR</button>
-                  </div>
+                </div>
             </form>
 
         </div>

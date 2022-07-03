@@ -1,4 +1,3 @@
-
 const connection = require('../db');
 
 module.exports.index = (req, res) => {

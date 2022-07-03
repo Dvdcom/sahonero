@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const bcryptjs = require('bcryptjs');
 
 const connection = require('../db');
 
@@ -10,13 +11,12 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     connection.query('SELECT * FROM usuarios WHERE nombre = ?', [req.body.usuario], async (error, results) => {
 
-        if (error) { throw error }
-        if (results.length == 0) {
-            console.log('El usuario y/o la contraseña es incorrecta.');
-            //res.send('El usuario y/o la contraseña es incorrecta.');
+        if (results.length == 0 || !(await bcryptjs.compare(req.body.password, results[0].password))) {
+            res.send('El correo y/o la contraseña son icorrectos');
         } else {
-            //req.session.user_id = results[0].id;
-            //req.session.user_usuario = results[0].nombre;
+            req.session.user_nombre = results[0].nombre;
+            req.session.user_rol = results[0].rol;
+
             res.redirect('/bienvenida');
         }
 
