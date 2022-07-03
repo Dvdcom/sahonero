@@ -16,8 +16,13 @@ router.post('/', (req, res) => {
         } else {
             req.session.user = results[0].nombre;
             req.session.rol = results[0].rol;
+            if (results[0].rol == 'Super-Admin'){
+                res.redirect('/super-admin/index');
+            }else{
+                res.redirect('/bienvenida');
+            }
 
-            res.redirect('/bienvenida');
+            
         }
 
     });

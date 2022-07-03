@@ -1,34 +1,38 @@
-<div class="container-fluid content-justify-center">
-    <div class="row justify-content-center p-5">
-        <div class="col- col-sm-4 col-md-5 col-lg-4 col-xl-3">
-            <h5>Crear usuario</h5>
-            <form action="/super-admin/store" method="post">
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                    <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Nombre Usuario">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                    <input type="text" id="email" name="email" class="form-control" placeholder="Correo electronico">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
-                </div>
-                <div class="input-group">
-                    <label class="input-group-text" for="rol"><i class="bi bi-robot"></i></label>
-                    <select class="form-select" id="rol" name="rol" aria-label="Filter select">
-                    <option selected><i class="bi bi-funnel"></i> Seleccione Rol</option>
-                    <option value="Usuario">Usuario</option>
-                    <option value="Admin">Admin</option>
-                    <option value="Super-Admin">Super-Admin</option>
-                    </select>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary mt-4">CREAR</button>
-                </div>
-            </form>
-
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-10">
+            <h2 class="text-primary">Bienvenido, <%= user %></h2>
+            <h6 class="text-secondary">Tu perfil es <%= rol %></h6>
+            <h5 class="mt-5">El motivo de la página</h5>
+            <p>
+                Fue creada y pensada para organizar mejor la información que se estaba pasando a través de e-mails.<br>
+                Con esta página podremos consolidar toda la información enviada por el contratista, y todas las respuestas de la administración.<br>
+                Creando entre ambas partes una buena base de datos con todos los registros de instalaciones y services que se hacen día a día.<br>
+                En el futuro podremos aprovechar esta BD para poder gestionar mejor los consumos y recuperós de equipos.
+            </p>
+            <h5>¿Cómo funciona?</h5>
+            <p class="text-wrap">
+                Existirán dos perfiles que manejaran la página.<br>
+                <ul>
+                    <li>
+                        Pefil: Usuario
+                    </li>
+                    <li>
+                        Perfil: Administrativo
+                    </li>
+                </ul>
+                El perfil de <span class="text-decoration-underline">Usuario</span> lo tendrá a cargo el <span class="fw-bold">Contratista.</span><br>
+                Podrá generar registros sea para pedir el cierre de una orden, o pedir información.<br>
+                Por defecto todos los registros que genere, tendrán  el estado <span class="fst-italic">"PENDIENTE"</span>,por lo que la administración deberá de cambiar este estado cuando realice la gestión.<br>
+                El perfil de usuario contará con su apartado para poder visualizar todos los registros creados con sus estados en tiempo real.<br>
+                Solo contará con la opción de AGREGAR un comentario al registro, para dar aviso si es que el registro lo haya generado mal.<br>
+            </p>
+            <p class="text-wrap">
+                El perfil de <span class="text-decoration-underline">Administrativo</span> lo tendra a cargo la <span class="fw-bold">Administración.</span><br>
+                Estará a cargo de contestar todos los registro, como de mails se tratase.<br>
+                Tendrá la opción de asignarse las líneas de registro que desee realizar, modificar los registros, completar con lo que haga falta y dar cierre cambiando el estado del registro a  
+                <span class="fst-italic">"CERRADO"</span>.
+            </p>
         </div>
     </div>
 </div>

@@ -1,6 +1,14 @@
 const connection = require('../db');
 const bcryptjs = require('bcryptjs');
 
+module.exports.index = (req,res)=>{
+    res.render('super-admin/index',{layout: './layouts/layout-super'});
+};
+
+module.exports.create = (req, res) => {
+    res.render('super-admin/create', { layout: './layouts/layout-super' });
+}
+
 module.exports.store = async (req, res) => {
     const hash = await bcryptjs.hash(req.body.password, 8);
 

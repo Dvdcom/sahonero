@@ -3,9 +3,10 @@ const router = express.Router();
 
 const controller = require('../controllers/super-admin');
 /*CAPA 2*/
-router.get('/super-admin',(req,res)=>{
-    res.render('super-admin/index',{layout: './layouts/layout-super'});
-});
+
+router.get('/super-admin/index', controller.index);
+
+router.get('/super-admin/create', controller.create);
 
 router.post('/super-admin/store', controller.store);
 
