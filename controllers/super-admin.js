@@ -2,11 +2,11 @@ const connection = require('../db');
 const bcryptjs = require('bcryptjs');
 
 module.exports.index = (req,res)=>{
-    res.render('super-admin/index',{layout: './layouts/layout-super'});
+    res.render('super-admin/index',{layout: './layouts/layout-navbar'});
 };
 
 module.exports.create = (req, res) => {
-    res.render('super-admin/create', { layout: './layouts/layout-super' });
+    res.render('super-admin/create', { layout: './layouts/layout-navbar' });
 }
 
 module.exports.store = async (req, res) => {
@@ -23,6 +23,6 @@ module.exports.store = async (req, res) => {
             
         if (error) { throw error }
 
-        res.redirect('/super-admin');
+        res.redirect('/super-admin/create');
     });
 }

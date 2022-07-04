@@ -1,29 +1,69 @@
 <div class="container-fluid">
 
-<div class="row justify-content-center p-5">
+  <div class="row justify-content-center p-5">
     <div class="col-10 col-sm-4 col-md-4 col-xl-2">
-        <h1 class="fs-4 fw-bold text-secondary">Iniciar Session</h1>
+      <h1 class="fs-4 fw-bold text-secondary">Iniciar Session</h1>
     </div>
-</div>
+  </div>
 
-<div class="row justify-content-center bg-dark text-white p-5">
+  <div class="row justify-content-center bg-dark text-white p-5">
     <div class="col-12 col-sm-4 col-md-4 col-xl-3">
-        <form action="/" method="post">
-          <div class="input-group mb-3">
-            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-            <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" aria-label="basic-addon1" aria-describedby="basic-addon1">
-          </div>
-          <div class="input-group mb-3">
-            <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" aria-label="basic-addon1" aria-describedby="basic-addon1">
-          </div>
-            <div class="mb-3">
-                <span>¿Olvido su contraseña? <a href="#" class="fw-bold text-primary text-decoration-none">Recuperar</a></span>
-            </div>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
-          </form>
+      <form action="/" method="post">
+        <div class="input-group mb-3">
+          <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+          <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario"
+            aria-label="basic-addon1" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+          <i class="bi bi-person-x-fill me-3"></i>Usuario <strong>incorrecto</strong>.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        <div class="input-group mb-3">
+          <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña"
+            aria-label="basic-addon1" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+          <i class="bi bi-shield-fill-x me-3"></i>Password <strong>incorrecto</strong>.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="mb-3">
+          <span>¿Olvido su contraseña? <a href="#"
+              class="fw-bold text-primary text-decoration-none">Recuperar</a></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </form>
     </div>
-</div>
+  </div>
+
+
+  <!-- 
+  
+  <%if(typeof errors != 'undefined'){
+  errors.forEach( error => {
+  if(error.param == 'password'){ %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert"></div>
+    <strong><%=error.msg %></strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <%}
+})}%>  
+
+-->
+
+  <!-- 
+  <% if (typeof errors != 'undefined') { %>
+  <ul class="list-unstyled text-danger">
+      <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+      <% }) %>
+  </ul>
+<% } %> 
+-->
 
 </div>
-

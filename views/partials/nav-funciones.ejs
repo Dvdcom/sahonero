@@ -8,22 +8,20 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/form-registros">Crear Registro</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Mis Registros</a>
-          </li>
         </ul>
           <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             <i class="bi bi-door-open-fill"></i>Configuracion
-            </a>
+            <button type="button" class="btn dropdown-toggle bg-light" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="border: none;">
+            <i class="bi bi-wrench-adjustable-circle me-2"></i>Configuracion
+            </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Mi Perfil</a></li>
+            <li><a class="dropdown-item" href="/form-registros"><i class="bi bi-pencil-square me-2"></i>Crear Registro</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Mis Registros</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/logout"><i class="bi bi-door-open me-2"></i>Logout</a></li>
           </ul>
         </div>
+        
       </div>
 
     </div>

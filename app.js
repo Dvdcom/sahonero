@@ -7,6 +7,9 @@ const methodOverride = require('method-override');
 
 app.set('layout', './layouts/layout');
 app.set('view engine', 'ejs');
+
+app.use(express.json())
+
 app.use(expressLayouts);
 
 /* CAPAS DE MIDDLEWARES */

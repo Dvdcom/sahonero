@@ -10,7 +10,13 @@
 </head>
 <body>
     <header>
-        <%- include('../partials/nav-funciones') -%>
+        <% if(rol == 'Super-Admin'){ %>
+            <%-include('../partials/nav-super')%>
+        <%}else{%>
+            <%-include('../partials/nav-funciones')%>
+        <%}
+        %>
+        <!-- <%- include('../partials/nav-funciones') -%> -->
     </header>
     <main><%- body %></main>
     <footer class="bg-ligth">
