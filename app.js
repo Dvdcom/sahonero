@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
     res.locals.user = req.session.user;
     res.locals.rol = req.session.rol;
     next();
-  });
+});
 
 /* CAPA 2 RUTAS*/
 app.use(require('./routes/index'));
