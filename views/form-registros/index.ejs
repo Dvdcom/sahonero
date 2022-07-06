@@ -8,11 +8,11 @@
             <form action="/form-registros/store" method="post">
                 <div class="input-group mb-2">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo:</label>
-                    <select class="form-select" id="inputGroupSelect01">
+                    <select class="form-select" id="inputGroupSelect01" name="inputGroupSelect01">
                         <option selected></option>
-                        <option value="1">Instalacion</option>
-                        <option value="2">Service</option>
-                        <option value="3">Solicitar datos</option>
+                        <option value="Instalacion">Instalacion</option>
+                        <option value="Service">Service</option>
+                        <option value="Solicitar datos">Solicitar datos</option>
                     </select>
                 </div>
 
@@ -68,12 +68,18 @@
                     <button type="button" class="btn btn-primary" style="display: inline-block;">+</button>
                 </div>
                 <div class="container">
-                    <div class="row justify-content-end">
+                    <div class="row justify-content-end my-2 d-block">
                         <div class="col-3">
+                            <!-- agregar un script que oculte el boton al precionarlo -->
                             <button type="submit" class="btn btn-primary mt-2">Enviar</button>
                         </div>
                     </div>
+                    <div class="d-flex align-items-center my-3 d-none">
+                        <strong>Enviando...</strong>
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                      </div>
                 </div>
+
             </form>
 
         </div>
