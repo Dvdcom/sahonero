@@ -19,7 +19,7 @@ router.post('/',[
     connection.query('SELECT * FROM usuarios WHERE nombre = ?', [req.body.usuario], async (error, results) => {
 
         if (results.length == 0 || !(await bcryptjs.compare(req.body.password, results[0].password))) {
-            //console.log(req.body, errors)
+            console.log(errors.array())
             res.render('index', {errors: errors.array()});
         } else {
             req.session.user = results[0].nombre;

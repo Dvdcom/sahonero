@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
 
   <div class="row justify-content-center p-5">
@@ -15,21 +16,25 @@
             aria-label="basic-addon1" aria-describedby="basic-addon1">
         </div>
 
-        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
-          <i class="bi bi-person-x-fill me-3"></i>Usuario <strong>incorrecto</strong>.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        
+        <% if (typeof errors != 'undefined' && errors[0].param == 'usuario') { %>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-person-x-fill me-3"></i>Usuario <strong>incorrecto</strong>.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <%}%>
+
         <div class="input-group mb-3">
           <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
           <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña"
             aria-label="basic-addon1" aria-describedby="basic-addon1">
         </div>
 
-        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+        <% if (typeof errors != 'undefined' && errors[0].param == 'password' || errors[1].param == 'password' ){%>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
           <i class="bi bi-shield-fill-x me-3"></i>Password <strong>incorrecto</strong>.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+        <%}%>
 
         <div class="mb-3">
           <span>¿Olvido su contraseña? <a href="#"
@@ -42,3 +47,4 @@
   </div>
 
 </div>
+
