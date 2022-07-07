@@ -6,3 +6,21 @@ body{
 .icon{
     filter: grayscale(100%);
 }
+
+input{
+    text-transform:uppercase;
+}
+
+.e-insta{
+    border: 1px solid green;
+    background-color:lightgreen;
+}
+
+.e-recup{
+    border: 1px solid crimson;
+    background-color:lightpink;
+}
+
+.b-mas{
+    display: inline-block;
+}
