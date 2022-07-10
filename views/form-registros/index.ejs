@@ -1,3 +1,4 @@
+
 <div class="container-fluid text-center mt-5">
     <h5 class="fw-bold">CREA UN REGISTRO</h5>
 </div>
@@ -9,10 +10,10 @@
                 <div class="input-group mb-2">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo:</label>
                     <select class="form-select" id="inputGroupSelect01" name="inputGroupSelect01">
-                        <option selected></option>
-                        <option value="Instalacion">Instalacion</option>
-                        <option value="Service">Service</option>
-                        <option value="Solicitar datos">Solicitar datos</option>
+                        <option value="" selected></option>
+                        <option value="Instalacion" <%= values.inputGroupSelect01 == 'Instalacion' ? 'selected' : '' %>>Instalacion</option>
+                        <option value="Service" <%= values.inputGroupSelect01 == 'Service' ? 'selected' : '' %>>Service</option>
+                        <option value="Solicitar datos" <%= values.inputGroupSelect01 == 'Solicitar datos' ? 'selected' : '' %>>Solicitar datos</option>
                     </select>
                 </div>
 
@@ -20,59 +21,59 @@
 
                 <div class="input-group fmi mb-1 d-none">
                     <span class="input-group-text" id="ot"><i class="bi bi-info-circle"></i></span>
-                    <input type="text" id="ot" name="ot" class="form-control" minlength="9" maxlength="9" placeholder="Orden de trabajo" 
+                    <input type="text" id="ot" name="ot" class="form-control" minlength="9" maxlength="9" placeholder="Orden de trabajo" value="<%=values.ot%>"
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
                 <div class="input-group fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="nombre"><i class="bi bi-file-person"></i></span>
-                    <input type="text" id="nombre" name="nombre" class="form-control" minlength="0" maxlength="30" placeholder="Nombre de Cliente">
+                    <input type="text" id="nombre" name="nombre" class="form-control" minlength="0" maxlength="30" placeholder="Nombre de Cliente" value="<%= values.nombre%>">
                 </div>
 
                 <div class="input-group fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="apellido"><i class="bi bi-file-person"></i></span>
-                    <input type="text" id="apellido" name="apellido" class="form-control" minlength="0" maxlength="30" placeholder="Apellido de Cliente">
+                    <input type="text" id="apellido" name="apellido" class="form-control" minlength="0" maxlength="30" placeholder="Apellido de Cliente" value="<%= values.apellido%>">
                 </div>
 
                 <div class="input-group fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="identificacion"><i class="bi bi-card-text"></i></span>
-                    <input type="text" id="identificacion" name="identificacion" class="form-control" minlength="5" maxlength="9" placeholder="Identificacion"
+                    <input type="text" id="identificacion" name="identificacion" class="form-control" minlength="5" maxlength="9" placeholder="Identificacion" value="<%= values.identificacion%>"
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
                 <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="contrato"><i class="bi bi-file-earmark-medical"></i></span>
-                    <input type="text" id="contrato" name="contrato" class="form-control" minlength="8" maxlength="12" placeholder="Contrato" 
+                    <input type="text" id="contrato" name="contrato" class="form-control" minlength="8" maxlength="12" placeholder="Contrato" value="<%= values.contrato%>"
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
                 <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="direccion"><i class="bi bi-house-door"></i></span>
-                    <input type="text" id="direccion" name="direccion" class="form-control" minlength="0" maxlength="40" placeholder="Direccion">
+                    <input type="text" id="direccion" name="direccion" class="form-control" minlength="0" maxlength="40" placeholder="Direccion" value="<%= values.direccion%>">
                 </div>
 
                 <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="telefono"><i class="bi bi-telephone"></i></span>
-                    <input type="text" id="telefono" name="telefono" class="form-control" minlength="10" maxlength="13" placeholder="Telefono">
+                    <input type="text" id="telefono" name="telefono" class="form-control" minlength="10" maxlength="13" placeholder="Telefono" value="<%= values.telefono%>">
                 </div>
 
                 <div class="input-group fmi fms mb-1 d-none">
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
-                    <input type="text" class="form-control e-insta" id="equipoi" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
+                    <input type="text" class="form-control e-insta" id="equipoi" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado" value="<%= values.equipoi%>"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-primary b-mas">+</button>
                 </div>
 
                 <div class="input-group fms mb-1 d-none">
                     <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
-                    <input type="text" class="form-control e-recup" id="equipor" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado"
+                    <input type="text" class="form-control e-recup" id="equipor" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado" value="<%= values.equipor%>"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-primary b-mas">+</button>
                 </div>
 
                 <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="comentario"><i class="bi bi-chat-left-dots"></i></span>
-                    <input type="text" id="comentario" name="comentario" class="form-control" minlength="0" maxlength="250" placeholder="Comentario">
+                    <input type="text" id="comentario" name="comentario" class="form-control" minlength="0" maxlength="250" placeholder="Comentario" value="<%= values.comentario%>">
                 </div>
 
                 <div class="container fmi fms fmd d-none">

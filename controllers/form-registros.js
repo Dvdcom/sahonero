@@ -3,7 +3,7 @@ const session = require('express-session');
 
 module.exports.index = (req, res) => {
     //console.log("ingresa en crear formulario")
-    res.render('form-registros/index', {layout: './layouts/layout-navbar'});
+    res.render('form-registros/index', {layout: './layouts/layout-navbar',values: {}});
 }
 
 module.exports.store = (req, res) => {
@@ -11,7 +11,7 @@ module.exports.store = (req, res) => {
         "INSERT INTO registros SET ?",
         {
             usuario: req.session.user.toUpperCase(),
-            tipo: req.body.inputGroupSelect01.toUpperCase(),
+            tipo: req.body.inputGroupSelect01,
             ot: req.body.ot,
             nombre_cliente: req.body.nombre.toUpperCase(),
             apellido_cliente: req.body.apellido.toUpperCase(),
@@ -23,12 +23,11 @@ module.exports.store = (req, res) => {
             equipor: req.body.equipor.toUpperCase(),
             comentario: req.body.comentario.toUpperCase()
         },
-        (error, results) => {
-            if (error) {
-                throw error;
-            }
+        (error, results) =>{
+            if (error) {throw error}
             console.log(results);
-            res.redirect("/form-registros");
-        }
-    );
+
+            res.render('form-registros/index', {layout: './layouts/layout-navbar', values:req.body});
+        
+        });
 }; 
