@@ -16,67 +16,67 @@
                     </select>
                 </div>
 
-                <label class="form-label">Complete la siguiente informacion:</label>
+                <label class="form-label fmi fms fmd d-none">Complete la siguiente informacion:</label>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmi mb-1 d-none">
                     <span class="input-group-text" id="ot"><i class="bi bi-info-circle"></i></span>
                     <input type="text" id="ot" name="ot" class="form-control" minlength="9" maxlength="9" placeholder="Orden de trabajo" 
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="nombre"><i class="bi bi-file-person"></i></span>
-                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de Cliente" minlength="0" maxlength="30">
+                    <input type="text" id="nombre" name="nombre" class="form-control" minlength="0" maxlength="30" placeholder="Nombre de Cliente">
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="apellido"><i class="bi bi-file-person"></i></span>
-                    <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido de Cliente" minlength="0" maxlength="30">
+                    <input type="text" id="apellido" name="apellido" class="form-control" minlength="0" maxlength="30" placeholder="Apellido de Cliente">
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="identificacion"><i class="bi bi-card-text"></i></span>
                     <input type="text" id="identificacion" name="identificacion" class="form-control" minlength="5" maxlength="9" placeholder="Identificacion"
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="contrato"><i class="bi bi-file-earmark-medical"></i></span>
                     <input type="text" id="contrato" name="contrato" class="form-control" minlength="8" maxlength="12" placeholder="Contrato" 
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="direccion"><i class="bi bi-house-door"></i></span>
                     <input type="text" id="direccion" name="direccion" class="form-control" minlength="0" maxlength="40" placeholder="Direccion">
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="telefono"><i class="bi bi-telephone"></i></span>
-                    <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Telefono">
+                    <input type="text" id="telefono" name="telefono" class="form-control" minlength="10" maxlength="13" placeholder="Telefono">
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmi fms mb-1 d-none">
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
                     <input type="text" class="form-control e-insta" id="equipoi" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-primary b-mas">+</button>
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fms mb-1 d-none">
                     <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
                     <input type="text" class="form-control e-recup" id="equipor" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-primary b-mas">+</button>
                 </div>
 
-                <div class="input-group mb-1">
+                <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="comentario"><i class="bi bi-chat-left-dots"></i></span>
-                    <input type="text" id="comentario" name="comentario" class="form-control" minlength="0" maxlength="150" placeholder="Comentario">
+                    <input type="text" id="comentario" name="comentario" class="form-control" minlength="0" maxlength="250" placeholder="Comentario">
                 </div>
 
-                <div class="container">
-                    <div class="row justify-content-end my-2 d-block">
+                <div class="container fmi fms fmd d-none">
+                    <div class="row my-2 fmi fms fmd d-none">
                         <div class="col-3">
                             <!-- agregar un script que oculte el boton al precionarlo -->
                             <button type="submit" class="btn btn-primary mt-2">Enviar</button>
@@ -85,7 +85,7 @@
                     <div class="d-flex align-items-center my-3 d-none">
                         <strong>Enviando...</strong>
                         <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
-                      </div>
+                    </div>
                 </div>
 
             </form>
@@ -93,3 +93,4 @@
         </div>
     </div>
 </div>
+<script src="/js/script.js"></script>

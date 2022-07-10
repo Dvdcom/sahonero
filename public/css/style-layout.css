@@ -7,10 +7,6 @@ body{
     filter: grayscale(100%);
 }
 
-input{
-    text-transform:uppercase;
-}
-
 .e-insta{
     border: 1px solid green;
     background-color:lightgreen;
