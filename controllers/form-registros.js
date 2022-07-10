@@ -1,9 +1,9 @@
 const connection = require('../db');
-const session = require('express-session');
+//const session = require('express-session');
 
 module.exports.index = (req, res) => {
     //console.log("ingresa en crear formulario")
-    res.render('form-registros/index', {layout: './layouts/layout-navbar',values: {}});
+    res.render('form-registros/index', {layout: './layouts/layout-navbar'});
 }
 
 module.exports.store = (req, res) => {
@@ -26,8 +26,6 @@ module.exports.store = (req, res) => {
         (error, results) =>{
             if (error) {throw error}
             console.log(results);
-
-            res.render('form-registros/index', {layout: './layouts/layout-navbar', values:req.body});
-        
+            res.render('form-registros/index', {layout: './layouts/layout-navbar'});
         });
 }; 
