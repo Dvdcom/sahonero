@@ -37,6 +37,7 @@ app.use(function(req, res, next) {
 app.use(require('./routes/index'));
 app.use(require('./routes/bienvenida'));
 app.use(require('./routes/form-registros'));
+app.use(require('./routes/mis-registros'));
 app.use(require('./routes/super-admin'));
 
 

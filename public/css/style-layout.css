@@ -1,8 +1,13 @@
+
 body{
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
+margin{
+    min-width: 100vh;
+}
+
 .icon{
     filter: grayscale(100%);
 }
