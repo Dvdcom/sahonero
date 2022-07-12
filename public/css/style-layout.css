@@ -25,3 +25,18 @@ margin{
 .b-mas{
     display: inline-block;
 }
+
+/*ajustes de tabla*/
+.dato-oc{
+    visibility: collapse;
+    display: none;
+}
+
+thead{
+    height: 10px;
+    font-size: .8rem;
+}
+.table td{
+    height: 10px;
+    font-size: .9rem;
+}
