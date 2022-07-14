@@ -35,6 +35,7 @@
             <table class="table table-striped table-hover align-middle" style="white-space: nowrap; overflow-x: auto;">
                 <thead>
                     <tr class="table-primary">
+                        <th>Fecha</th>
                         <th>Usuario</th>
                         <th>Tipo</th>
                         <th>OT</th>
@@ -55,6 +56,10 @@
                 <tbody>
                     <% registros.forEach(registro => {%>
                     <tr>
+                        <% let fecha = registro.fecha
+                            let fechaCompleta = ('0'+fecha.getDate()).slice(-2)+'/'+('0'+fecha.getMonth()).slice(-2)+'/'+fecha.getFullYear();
+                        %>
+                        <td><%= fechaCompleta%></td>
                         <td><%= registro.usuario %></td>
                         <td><%= registro.tipo %></td>
                         <td><%= registro.ot %></td>
@@ -89,7 +94,6 @@
                             </a>
                         </li>
                         <% } %>
-            
                             <% for(let i=iterator; i <=endingLink; i++) { %>
                                 <% if(i===page) { %>
                                     <li class="page-item active" aria-current="page">
@@ -99,11 +103,11 @@
                                     </li>
                                     <% continue; %>
                                         <% } %>
-                                            <li class="page-item"><a class="page-link" href="/mis-registros/?page=<%=i%>">
+                                            <li class="page-item"><a class="page-link"
+                                                    href="/mis-registros/?page=<%=i%>">
                                                     <%=i%>
                                                 </a></li>
                                             <% } %>
-            
                                                 <% if(page < numberOfPages) { %>
                                                     <li class="page-item">
                                                         <a class="page-link" href="/mis-registros/?page=<%=page+1%>"

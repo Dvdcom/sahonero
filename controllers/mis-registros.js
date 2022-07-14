@@ -15,7 +15,7 @@ module.exports.index = (req, res) => {
             res.redirect('/?page=' + encodeURIComponent('1'));
         }
         const startingLimit = (page - 1) * resultsPerPage;
-        sql = `SELECT * FROM registros LIMIT ${startingLimit},${resultsPerPage}`;
+        sql = `SELECT * FROM registros ORDER BY fecha DESC LIMIT ${startingLimit},${resultsPerPage}`;
 
         connection.query(sql, (error, result) => {
             if (error) { throw error }
