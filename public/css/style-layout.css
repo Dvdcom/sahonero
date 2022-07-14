@@ -8,6 +8,10 @@ margin{
     min-width: 100vh;
 }
 
+.Copyright{
+    font-size: x-small;
+}
+
 .icon{
     filter: grayscale(100%);
 }
@@ -42,4 +46,18 @@ thead{
     font-size: .9rem;
     padding: 2px;
     text-align: center;
+}
+
+a{
+    margin-right: 15px;
+    color: blue;
+}
+
+.selectedLink{
+    color: red;
+}
+
+
+a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
 }
