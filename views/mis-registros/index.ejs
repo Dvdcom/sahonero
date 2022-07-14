@@ -20,15 +20,6 @@
     </div>
 <%}%>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <button class="btn btn-primary btn-sm"><i class="bi bi-eye-slash me-2"></i>Columnas</button>
-            <button class="btn btn-primary btn-sm d-none"><i class="bi bi-eye me-2"></i>Columnas</button>
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid mt-2 table-responsive">
     <div class="row">
         <div class="col-12">
@@ -36,28 +27,28 @@
                 <thead>
                     <tr class="table-primary">
                         <th>Fecha</th>
-                        <th>Usuario</th>
-                        <th>Tipo</th>
-                        <th>OT</th>
-                        <th>Nombre_Cliente</th>
-                        <th>Apellido_cliente</th>
-                        <th>Identificacion</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Usuario</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Tipo</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>OT</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Nombre_Cliente</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Apellido_cliente</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Identificacion</th>
                         <th class="dato-oc">Contrato</th>
                         <th class="dato-oc">Direccion</th>
                         <th class="dato-oc">Telefono</th>
-                        <th>Equipoi</th>
-                        <th>Equipor</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Equipoi</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Equipor</th>
                         <th class="dato-oc">Comentario</th>
-                        <th>Estado</th>
-                        <th>Administrador</th>
-                        <th>Comentar</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Estado</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Administrador</th>
+                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Agregar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <% registros.forEach(registro => {%>
                     <tr>
-                        <% let fecha = registro.fecha
-                            let fechaCompleta = ('0'+fecha.getDate()).slice(-2)+'/'+('0'+fecha.getMonth()).slice(-2)+'/'+fecha.getFullYear();
+                    <% let fecha = registro.fecha;
+                        let fechaCompleta = ('0'+fecha.getDate()).slice(-2)+'/'+('0'+fecha.getMonth()).slice(-2)+'/'+fecha.getFullYear();
                         %>
                         <td><%= fechaCompleta%></td>
                         <td><%= registro.usuario %></td>

@@ -48,16 +48,7 @@ thead{
     text-align: center;
 }
 
-a{
-    /*margin-right: 15px;*/
+#fcolumn:hover{
+    cursor: pointer;
     color: blue;
-}
-
-.selectedLink{
-    color: red;
-}
-
-
-a:link,a:visited,a:hover,a:active{
-    text-decoration: none;
 }
