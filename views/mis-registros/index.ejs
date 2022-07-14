@@ -80,16 +80,42 @@
 <div class="container-fluid d-flex justify-content-center mb-3">
     <div class="row">
         <div class="col-12">
-        <% if(page > 1) { %> <a href="/mis-registros/?page=<%=page-1%>">Anterior</a> <% } %>
-        <% for(let i = iterator; i <= endingLink; i++) { %>
-            <% if(i === page) { %>
-            <a class="selectedLink" href="/mis-registros/?page=<%=i%>"><%=i%></a>
-            <% continue; %>
-        <% } %>
-            <a href="/mis-registros/?page=<%=i%>"><%=i%></a>
-            <% } %>
-        <% if(page < numberOfPages) { %> <a href="/mis-registros/?page=<%=page+1%>">Siguiente</a> <% } %>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination pagination-sm">
+                    <% if(page> 1) { %>
+                        <li class="page-item">
+                            <a class="page-link" href="/mis-registros/?page=<%=page-1%>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <% } %>
+            
+                            <% for(let i=iterator; i <=endingLink; i++) { %>
+                                <% if(i===page) { %>
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="/mis-registros/?page=<%=i%>">
+                                            <%=i%>
+                                        </a>
+                                    </li>
+                                    <% continue; %>
+                                        <% } %>
+                                            <li class="page-item"><a class="page-link" href="/mis-registros/?page=<%=i%>">
+                                                    <%=i%>
+                                                </a></li>
+                                            <% } %>
+            
+                                                <% if(page < numberOfPages) { %>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="/mis-registros/?page=<%=page+1%>"
+                                                            aria-label="Next">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <% } %>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
+
 
