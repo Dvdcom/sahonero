@@ -121,11 +121,12 @@
                                     </li>
                                     <% continue; %>
                                         <% } %>
+                                        <%if (i > 0) {%>
                                             <li class="page-item"><a class="page-link"
                                                     href="/mis-registros/?page=<%=i%>">
                                                     <%=i%>
                                                 </a></li>
-                                            <% } %>
+                                            <% }} %>
                                                 <% if(page < numberOfPages) { %>
                                                     <li class="page-item">
                                                         <a class="page-link" href="/mis-registros/?page=<%=page+1%>"
