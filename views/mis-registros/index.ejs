@@ -20,11 +20,11 @@
                                     Filtrar Tipo
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/mis-registros/filtrar">Instalacion</a></li>
-                                    <li><a class="dropdown-item" href="#">Service</a></li>
-                                    <li><a class="dropdown-item" href="#">Solicitud de Datos</a></li>
+                                    <li><a class="dropdown-item" href="/mis-registros/Instalacion">Instalacion</a></li>
+                                    <li><a class="dropdown-item" href="/mis-registros/Service">Service</a></li>
+                                    <li><a class="dropdown-item" href="/mis-registros/Solicitar Datos">Solicitud de Datos</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Todos</a></li>
+                                    <li><a class="dropdown-item" href="/mis-registros">Todos</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -105,6 +105,7 @@
             <span class="ps-4 mt-3">Total de registros <%= numOfResults%></span>
             <nav class="pe-4 mt-3" aria-label="Page navigation example">
                 <ul class="pagination pagination-sm">
+                    <% if (resultsPerPage < numOfResults) {%>
                     <% if(page> 1) { %>
                         <li class="page-item">
                             <a class="page-link" href="/mis-registros/?page=<%=page-1%>" aria-label="Previous">
@@ -134,7 +135,7 @@
                                                             <span aria-hidden="true">&raquo;</span>
                                                         </a>
                                                     </li>
-                                                    <% } %>
+                                                    <% }} %>
                 </ul>
             </nav>
         </div>
