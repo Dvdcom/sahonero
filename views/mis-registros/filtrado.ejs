@@ -1,8 +1,8 @@
 <div class="container-fluid mt-4 mx-auto">
     <div class="row my-4 ms-3">
         <div class="col-12">
-            <h1>Todos los registros</h1>
-            <p>Como usuario podras ver todos los registros creados.</p>
+            <h1 class="text-primary">Todos los registros</h1>
+            <p>Como usuario podras ver todos los registros creados, filtrar a conveniencia.</p>
         </div>
     </div>
 </div>
@@ -90,7 +90,7 @@
                         <td class="dato-oc"><%= registro.comentario %></td>
                         <td><%= registro.estado %></td>
                         <td><%= registro.administrador %></td>
-                        <td><a href="#" class="btn btn-outline-secondary btn-sm">comentar</a></td>
+                        <td><a href="/mis-registros/<%= registro.id %>/edit" class="btn btn-outline-secondary btn-sm">comentar</a></td>
                     </tr>
                     <% }) %>
                 </tbody>
@@ -102,7 +102,9 @@
 <div class="container-fluid mb-4">
     <div class="row">
         <div class="col-12 d-flex justify-content-between">
-            <span class="ps-4 mt-3">Total de registros <%= numOfResults%></span>
+            <div class="ps-4 mt-3">
+                <input class="fw-bold btn btn-sm btn-outline-primary disabled" type="text" value="Total de registros : <%= numOfResults%>">
+                </div>
             <nav class="pe-4 mt-3" aria-label="Page navigation example">
                 <ul class="pagination pagination-sm">
                     <% if (resultsPerPage < numOfResults) {%>

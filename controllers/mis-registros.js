@@ -58,3 +58,23 @@ module.exports.filtrar = (req, res) => {
     });
 };
 
+module.exports.edit = (req,res) =>{
+    connection.query('SELECT * FROM registros WHERE id=?',[req.params.id],(error,results)=>{
+        if(error){throw error}
+        //console.log(results);
+        //res.render('productos/index',{productos: results});
+        res.render('mis-registros/edit',{registros: results[0], layout:'./layouts/layout-navbar'});
+    });
+};
+
+module.exports.update = (req,res)=>{
+    connection.query('UPDATE registros SET ? WHERE id = ?',[
+        {comentario: req.body.comentario,
+        estado:'PENDIENTE'},req.body.id],(error)=>{
+        if(error){throw error}
+        
+        res.redirect('/mis-registros');
+        
+    });
+}
+

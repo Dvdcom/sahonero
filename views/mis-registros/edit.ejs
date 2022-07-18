@@ -1,0 +1,91 @@
+
+<div class="container-fluid mt-5">
+    <h1 class="text-primary ms-3">Comentario de Registro</h1>
+    <p class="ms-3">En esta sección podrá comentar un registro en particular puede utilizar los comentarios 
+        para indicar algún error de tipeo o algún pedido una vez comentado volverá el registro volverá a estar en estado pendiente.</p>
+</div>
+
+<div class="container-fluid mt-4">
+    <h5 class="fw-bold text-center ms-3">EDITA EL COMENTARIO:</h5>
+</div>
+
+<div class="container-fluid mt-3">
+    <div class="row justify-content-center bg-dark text-dark p-3">
+        <div class="col-10 col-sm-4 col-md-5 col-lg-4 col-xl-3">
+            <form action="/mis-registros/update?_method=PUT" method="post">
+                <input type="hidden" name="id" value="<%= registros.id%>">
+                <div class="input-group fmi fms fmd mb-1 ">
+                    <span class="input-group-text" id="tipo"><i class="bi bi-fonts"></i></span>
+                    <input type="text" id="tipo" name="tipo"class="form-control" minlength="0" maxlength="30" value="<%= registros.tipo%>" disabled>
+                </div>
+                
+                <div class="input-group fmi mb-1 ">
+                    <span class="input-group-text" id="ot"><i class="bi bi-info-circle"></i></span>
+                    <input type="text" id="ot" name="ot" class="form-control" minlength="9" maxlength="9" value="<%= registros.ot%>" disabled>
+                </div>
+
+                <div class="input-group fmi fms fmd mb-1">
+                    <span class="input-group-text" id="nombre"><i class="bi bi-file-person"></i></span>
+                    <input type="text" id="nombre" name="nombre" class="form-control" minlength="0" maxlength="30" value="<%= registros.nombre_cliente%>" disabled>
+                </div>
+
+                <div class="input-group fmi fms fmd mb-1">
+                    <span class="input-group-text" id="apellido"><i class="bi bi-file-person"></i></span>
+                    <input type="text" id="apellido" name="apellido" class="form-control" minlength="0" maxlength="30" value="<%= registros.apellido_cliente%>" disabled>
+                </div>
+
+                <div class="input-group fmi fms fmd mb-1">
+                    <span class="input-group-text" id="identificacion"><i class="bi bi-card-text"></i></span>
+                    <input type="text" id="identificacion" name="identificacion" class="form-control" minlength="5" maxlength="9" value="<%= registros.identificacion%>" disabled>
+                </div>
+
+                <div class="input-group fmd mb-1">
+                    <span class="input-group-text" id="contrato"><i class="bi bi-file-earmark-medical"></i></span>
+                    <input type="text" id="contrato" name="contrato" class="form-control" minlength="8" maxlength="12" value="<%= registros.contrato%>" disabled>
+                </div>
+
+                <div class="input-group fmd mb-1">
+                    <span class="input-group-text" id="direccion"><i class="bi bi-house-door"></i></span>
+                    <input type="text" id="direccion" name="direccion" class="form-control" minlength="0" maxlength="40" value="<%= registros.direccion%>" disabled>
+                </div>
+
+                <div class="input-group fmd mb-1">
+                    <span class="input-group-text" id="telefono"><i class="bi bi-telephone"></i></span>
+                    <input type="text" id="telefono" name="telefono" class="form-control" minlength="10" maxlength="13" value="<%= registros.telefono%>" disabled>
+                </div>
+
+                <div class="input-group fmi fms mb-1">
+                    <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
+                    <input type="text" class="form-control e-insta" id="equipoi" name="equipoi" minlength="9" maxlength="18" value="<%= registros.equipoi%>" disabled>
+                </div>
+
+                <div class="input-group fms mb-1">
+                    <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
+                    <input type="text" class="form-control e-recup" id="equipor" name="equipor" minlength="9" maxlength="18" value="<%= registros.equipor%>" disabled>
+                </div>
+
+                <div class="input-group fmd mb-1">
+                    <span class="input-group-text" id="comentario"><i class="bi bi-chat-left-dots"></i></span>
+                    <input type="text" id="comentario" name="comentario" class="form-control" minlength="0" maxlength="250" value="<%= registros.comentario%>">
+                </div>
+
+                <div class="container">
+                    <div class="row my-2 d-flex justify-content-between">
+                        <div class="col-3">
+                            <!-- agregar un script que oculte el boton al precionarlo -->
+                            <button type="submit" class="btn btn-primary mt-2">Actualizar</button>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-danger mt-2"><a href="/mis-registros" class="text-decoration-none text-white">Cancelar</button>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center my-3 d-none">
+                        <strong>Enviando...</strong>
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
