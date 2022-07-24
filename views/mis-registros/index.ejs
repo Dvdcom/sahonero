@@ -7,66 +7,64 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <nav class="navbar navbar-expand-md bg-primary text-dark bg-opacity-25 rounded-top border-bottom border-primary border-2 nav-filtros">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Filtrar Tipo
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/mis-registros/Instalacion">Instalacion</a></li>
-                                    <li><a class="dropdown-item" href="/mis-registros/Service">Service</a></li>
-                                    <li><a class="dropdown-item" href="/mis-registros/Solicitar Datos">Solicitud de Datos</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/mis-registros">Todos</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-eye me-2 me-1" id="navcolumn"></i>Columnas Datos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-eye me-2 me-1" id="navcolumn"></i>Comentarios</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                            <button class="btn btn-outline-primary btn-sm" type="submit">Buscar</button>
-                        </form>
+<div class="container-fluid mt-4 mx-auto">
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-3">
+                    <div class="input-group date" id="datepicker">
+                        <span class="input-group-text input-group-append">Desde:</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
                     </div>
                 </div>
-            </nav>
-        </div>
+                <div class="col-3">
+                    <div class="input-group date" id="datepicker2">
+                        <span class="input-group-text input-group-append">Hasta:</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-secondary">Filtrar</button>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-secondary">Comentarios</button>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-secondary">Mas Columnas</button>
+                </div>
+            </div>
+        </form>
+
+        
+        
     </div>
 </div>
 
-<div class="container-fluid table-responsive">
+
+<div class="container-fluid d-flex justify-content-center bg-light py-3 mb-5 mx-auto">
     <div class="row">
         <div class="col-12">
-            <table class="table table-striped table-hover align-middle m-0" style="white-space: nowrap; overflow-x: auto;">
+            <table id="miTablet" class="table table-sm table-striped">
                 <thead>
                     <tr class="table-primary">
                         <th>Fecha</th>
-                        <th class="dato-oc"><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Usuario</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Tipo<i class="bi bi-funnel ms-1" id="fcolumn"></i></th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>OT</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Nombre_Cliente</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Apellido_cliente</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Identificacion</th>
+                        <th class="dato-oc">Usuario</th>
+                        <th>Tipo</th>
+                        <th>OT</th>
+                        <th>Nombre_Cliente</th>
+                        <th>Apellido_cliente</th>
+                        <th>Identificacion</th>
                         <th class="dato-oc">Contrato</th>
                         <th class="dato-oc">Direccion</th>
                         <th class="dato-oc">Telefono</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Equipoi</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Equipor</th>
+                        <th>Equipoi</th>
+                        <th>Equipor</th>
                         <th class="dato-oc">Comentario</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Estado</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Administrador</th>
-                        <th><i class="bi bi-eye me-2 me-1" id="fcolumn"></i>Agregar</th>
+                        <th>Estado</th>
+                        <th>Administrador</th>
+                        <th>Agregar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -99,49 +97,5 @@
     </div>
 </div>
 
-<div class="container-fluid mb-4">
-    <div class="row">
-        <div class="col-12 d-flex justify-content-between">
-            <div class="ps-4 mt-3">
-            <input class="fw-bold btn btn-sm btn-outline-primary disabled" type="text" value="Total de registros : <%= numOfResults%>">
-            </div>
-            <nav class="pe-4 mt-3" aria-label="Page navigation example">
-                <ul class="pagination pagination-sm">
-                    <% if (resultsPerPage < numOfResults) {%>
-                    <% if(page> 1) { %>
-                        <li class="page-item">
-                            <a class="page-link" href="/mis-registros/?page=<%=page-1%>" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <% } %>
-                            <% for(let i=iterator; i <=endingLink; i++) { %>
-                                <% if(i===page) { %>
-                                    <li class="page-item active" aria-current="page">
-                                        <a class="page-link" href="/mis-registros/?page=<%=i%>">
-                                            <%=i%>
-                                        </a>
-                                    </li>
-                                    <% continue; %>
-                                        <% } %>
-                                        <%if (i > 0) {%>
-                                            <li class="page-item"><a class="page-link"
-                                                    href="/mis-registros/?page=<%=i%>">
-                                                    <%=i%>
-                                                </a></li>
-                                            <% }} %>
-                                                <% if(page < numberOfPages) { %>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="/mis-registros/?page=<%=page+1%>"
-                                                            aria-label="Next">
-                                                            <span aria-hidden="true">&raquo;</span>
-                                                        </a>
-                                                    </li>
-                                                    <% }} %>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</div>
 
 

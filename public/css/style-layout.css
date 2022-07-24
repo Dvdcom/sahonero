@@ -36,24 +36,6 @@ margin{
     display: none;
 }
 
-thead{
-    height: 10px;
-    font-size: .8rem;
-    text-align: center;
-}
-.table td{
-    height: 10px;
-    font-size: .9rem;
-    padding: 2px;
-    text-align: center;
-}
-
-#fcolumn:hover{
-    cursor: pointer;
-    color: blue;
-}
-
-.nav-filtros{
-    height: 45px;
-    font-size:medium;
+table{
+    font-size: small;
 }
