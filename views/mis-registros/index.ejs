@@ -7,38 +7,41 @@
     </div>
 </div>
 
-<div class="container-fluid mt-4 mx-auto">
+<div class="container-fluid d-flex justify-content-center">
     <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    +Opciones
+                </button>
+            </div>
+        </div>
         <form>
-            <div class="row">
-                <div class="col-3">
-                    <div class="input-group date" id="datepicker">
-                        <span class="input-group-text input-group-append">Desde:</span>
-                        <input type="text" class="form-control">
-                        <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
+            <div class="collapse" id="collapseExample">
+                <div class="row py-2 my-3 border-top">
+                    <div class="col-3 col-sm-4 col-md-5 col-lg-4 col-xl-3 mb-3 me-2">
+                            <div class="input-group input-group-sm date mb-1" id="datepicker">
+                                <span class="input-group-text input-group-append">Desde:</span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
+                            </div>
+                            <div class="input-group input-group-sm date" id="datepicker2">
+                                <span class="input-group-text input-group-append">Hasta:</span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
+                            </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="input-group date" id="datepicker2">
-                        <span class="input-group-text input-group-append">Hasta:</span>
-                        <input type="text" class="form-control">
-                        <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
+                    <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-1 mb-3 me-1">
+                        <button type="button" class="btn btn-sm btn-secondary mb-1" style="width: 100%">Filtrar</button>
+                        <button type="button" class="btn btn-sm btn-secondary" style="width: 100%">Default</button>
                     </div>
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-secondary">Filtrar</button>
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-secondary">Comentarios</button>
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-secondary">Mas Columnas</button>
+                    <div class="col-2 col-sm-3 col-md-3 col-lg-3 col-xl-2 mb-3">
+                        <button type="button" class="btn btn-sm btn-secondary mb-1" style="width: 100%">Comentarios</button>
+                        <button type="button" class="btn btn-sm btn-secondary" style="width: 100%">Mas Columnas</button>
+                    </div>
                 </div>
             </div>
         </form>
-
-        
-        
     </div>
 </div>
 
