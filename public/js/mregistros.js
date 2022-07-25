@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $('#miTablet').DataTable({
         "lengthMenu": [ 15, 20, 50, 75, 100 ],
@@ -25,11 +24,27 @@ $(document).ready(function () {
             }
         }
     });
-    
+    $('#btnmodal').click(function(){
+        var tipo =$('this').data('tipo');
+        var nombre =$('this').data('nom');
+        var apellido =$('this').data('ape');
+        var equipoi =$('this').data('equip');
+        var equipor =$('this').data('equip2');
+        var comentario =$('this').data('comentario');
+
+        $('#tip').val(tipo);
+        $('#nomb').val(nombre);
+        $('#apell').val(apellido);
+        $('#equi').val(equipoi);
+        $('#equr').val(equipor);
+        $('#com').val(comentario);
+        console.log('funcion ejecutandose');
+    });
 });
 
 $(function() {
     $('#datepicker').datepicker();
     $('#datepicker2').datepicker();
 });
+
 
