@@ -8,7 +8,7 @@
 </div>
 
 <div class="container-fluid d-flex justify-content-center">
-    <div class="container">
+    <div class="container" id="contOpciones">
         <div class="row mb-3">
             <div class="col">
                 <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -92,8 +92,7 @@
                         <td><%= registro.estado %></td>
                         <td><%= registro.administrador %></td>
                         <td><button type="button" id="btnmodal" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-tipo="<%= registro.tipo%>" data-nom="<%= registro.nombre_cliente%>" data-ape="<%= registro.apellido_cliente%>" 
-                        data-equip="<%= registro.equipoi%>" data-equip2="<%= registro.equipor%>" data-comentario="<%= registro.comentario%>">Comentar</button></td>
+                            onclick="selRegistro('<%= registro.id%>','<%= registro.tipo%>','<%= registro.nombre_cliente%>','<%= registro.apellido_cliente%>','<%= registro.equipoi%>','<%= registro.equipor%>','<%= registro.comentario%>');">Comentar</button></td>
                     </tr>
                     <%})%>
                 </tbody>
@@ -106,41 +105,38 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">EDITA EL COMENTARIO:</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><input type="text" id="tipo" class="border border-0"></input></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="input-group fmi fms fmd mb-1 ">
-                        <span class="input-group-text"><i class="bi bi-fonts"></i></span>
-                        <input type="text" id="tip" name="tipo" class="form-control" disabled>
+                <form action="/mis-registros/update?_method=PUT" method="post">
+                    <input type="hidden" id="id" name="id">
+                    <div class="input-group fmi fms fmd mb-1">
+                        <span class="input-group-text"><i class="bi bi-file-person"></i></span>
+                        <input type="text" id="nombre" name="nombre" class="form-control" disabled>
                     </div>
                     <div class="input-group fmi fms fmd mb-1">
                         <span class="input-group-text"><i class="bi bi-file-person"></i></span>
-                        <input type="text" id="nomb" name="nombre" class="form-control" disabled>
-                    </div>
-                    <div class="input-group fmi fms fmd mb-1">
-                        <span class="input-group-text"><i class="bi bi-file-person"></i></span>
-                        <input type="text" id="apell" name="apellido" class="form-control" disabled>
+                        <input type="text" id="apellido" name="apellido" class="form-control" disabled>
                     </div>
                     <div class="input-group fmi fms mb-1">
                         <span class="input-group-text e-insta"><i class="bi bi-router"></i></span>
-                        <input type="text" class="form-control e-insta" id="equi" name="equipoi" disabled>
+                        <input type="text" id="equipoi" name="equipoi" class="form-control e-insta" disabled>
                     </div>
                     <div class="input-group fms mb-1">
                         <span class="input-group-text e-recup"><i class="bi bi-router-fill"></i></span>
-                        <input type="text" class="form-control e-recup" id="equr" name="equipor" disabled>
+                        <input type="text" id="equipor" name="equipor" class="form-control e-recup" disabled>
                     </div>
                     <div class="input-group fmd mb-1">
                         <span class="input-group-text"><i class="bi bi-chat-left-dots"></i></span>
-                        <input type="text" id="com" name="comentario" class="form-control">
+                        <input type="text" id="comentario" name="comentario" class="form-control">
                     </div>
-                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Actualizar</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
             </div>
+            </form>
         </div>
     </div>
     </div>

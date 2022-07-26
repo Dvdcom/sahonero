@@ -9,7 +9,6 @@ module.exports.index = (req, res) => {
         });
 };
 
-
 module.exports.filtrar = (req, res) => {
     const {filtro} = req.params
     let sql = `SELECT * FROM registros WHERE tipo = '${filtro}'`;
@@ -35,15 +34,6 @@ module.exports.filtrar = (req, res) => {
             }
             return res.render('mis-registros/filtrado',{registros: result, filtro,page, iterator,numOfResults,resultsPerPage, endingLink, numberOfPages,layout: './layouts/layout-navbar'});
         });
-    });
-};
-
-module.exports.edit = (req,res) =>{
-    connection.query('SELECT * FROM registros WHERE id=?',[req.params.id],(error,results)=>{
-        if(error){throw error}
-        //console.log(results);
-        //res.render('productos/index',{productos: results});
-        res.render('mis-registros/edit',{registros: results[0], layout:'./layouts/layout-navbar'});
     });
 };
 

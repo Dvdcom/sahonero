@@ -24,27 +24,20 @@ $(document).ready(function () {
             }
         }
     });
-    $('#btnmodal').click(function(){
-        var tipo =$('this').data('tipo');
-        var nombre =$('this').data('nom');
-        var apellido =$('this').data('ape');
-        var equipoi =$('this').data('equip');
-        var equipor =$('this').data('equip2');
-        var comentario =$('this').data('comentario');
 
-        $('#tip').val(tipo);
-        $('#nomb').val(nombre);
-        $('#apell').val(apellido);
-        $('#equi').val(equipoi);
-        $('#equr').val(equipor);
-        $('#com').val(comentario);
-        console.log('funcion ejecutandose');
-    });
 });
+
+selRegistro = function(id,tipo,nombre,apellido,equipoi,equipor,comentario){
+    $('#id').val(id);
+    $('#tipo').val(tipo);
+    $('#nombre').val(nombre);
+    $('#apellido').val(apellido);
+    $('#equipoi').val(equipoi);
+    $('#equipor').val(equipor);
+    $('#comentario').val(comentario);
+};
 
 $(function() {
     $('#datepicker').datepicker();
     $('#datepicker2').datepicker();
 });
-
-
