@@ -4,98 +4,75 @@ const form_service = document.querySelectorAll('.fms');
 const form_datos = document.querySelectorAll('.fmd');
 
 const selector = document.querySelector('.form-select');
-let i = 2;
+
 
 window.addEventListener('load', function() {
-    i = 2;
     MostrarOcultarInputs();
 });
 
 function MostrarOcultarInputs(){
-    if (selector.value === "Instalacion") {
+    for (var i = 1; i < 11; i++){
+        let inp = ".inp-form-" + i
+        let inputsGroup = document.querySelector(inp);
 
-        form_service.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_datos.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_instalacion.forEach(function(elemento){
-            elemento.classList.remove('d-none');
-        });
-    }
-    else if (selector.value === "Service"){
-    
-        form_instalacion.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_datos.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_service.forEach(function(elemento){
-            elemento.classList.remove('d-none');
-        });
-    }else if (selector.value === "Solicitar datos"){
-    
-        form_instalacion.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_service.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_datos.forEach(function(elemento){
-            elemento.classList.remove('d-none');
-        });
-    }else{
-        form_instalacion.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_service.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    
-        form_datos.forEach(function(elemento){
-            elemento.classList.add('d-none');
-        });
-    }
-}
+        switch (selector.value) {
 
-function contarInputs(){
-    let x = 0
-    let inputsI = document.querySelectorAll('.inpi');
-    inputsI.forEach(function(elemento){
-        if (elemento.classList.contains('d-none')) {
-            x = x + 1;
+            case "Instalacion" :
+                if (inputsGroup.classList.contains('fmi')){
+                    inputsGroup.classList.remove('d-none');
+                }else{
+                        inputsGroup.classList.add('d-none');
+                }
+                break;
+            case "Service" :
+                if (inputsGroup.classList.contains('fms')){
+                    inputsGroup.classList.remove('d-none');
+                }else{
+                        inputsGroup.classList.add('d-none');
+                }
+                break;
+            case "Solicitar datos" :
+                if (inputsGroup.classList.contains('fmd')){
+                    inputsGroup.classList.remove('d-none');
+                }else{
+                        inputsGroup.classList.add('d-none');
+                }
+                break;
+            default :
+                inputsGroup.classList.add('d-none');
+                break;
         }
-    });
-    return x
+}
 }
 
 function agregarInput(){
-
-    if ( contarInputs() != 0){
-        
+    for (var i = 2; i < 6; i++){
         let inp = ".inp-" + i
-        const inputsGroup = document.querySelector(inp);
-        inputsGroup.classList.remove('d-none');
-        i= i+1;
+        let inputsGroup = document.querySelector(inp);
+
+        if (inputsGroup.classList.contains('d-none')){
+            inputsGroup.classList.remove('d-none');
+            break;
+        }
     }
-
-
 }
-//contar inputs de equipos
+
+function agregarInputR(){
+    for (var i = 6; i < 10; i++){
+        let inp = ".inp-" + i
+        let inputsGroup = document.querySelector(inp);
+
+        if (inputsGroup.classList.contains('d-none')){
+            inputsGroup.classList.remove('d-none');
+            break;
+        }
+    }
+}
+
 function quitarInput(x){
     let inp = ".inp-" + x
     const inputsGroup = document.querySelector(inp);
     inputsGroup.classList.add('d-none');
-    i=i-1
 }
 
 

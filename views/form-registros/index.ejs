@@ -20,92 +20,119 @@
 
                 <label class="form-label fmi fms fmd d-none">Complete la siguiente informacion:</label>
 
-                <div class="input-group fmi mb-1 d-none">
+                <div class="input-group inp-form-1 fmi mb-1 d-none">
                     <span class="input-group-text" id="ot"><i class="bi bi-info-circle"></i></span>
                     <input type="text" id="ot" name="ot" class="form-control" minlength="9" maxlength="9" placeholder="Orden de trabajo" 
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
-                <div class="input-group fmi fms fmd mb-1 d-none">
+                <div class="input-group inp-form-2 fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="nombre"><i class="bi bi-file-person"></i></span>
                     <input type="text" id="nombre" name="nombre" class="form-control" minlength="0" maxlength="30" placeholder="Nombre de Cliente">
                 </div>
 
-                <div class="input-group fmi fms fmd mb-1 d-none">
+                <div class="input-group inp-form-3 fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="apellido"><i class="bi bi-file-person"></i></span>
                     <input type="text" id="apellido" name="apellido" class="form-control" minlength="0" maxlength="30" placeholder="Apellido de Cliente">
                 </div>
 
-                <div class="input-group fmi fms fmd mb-1 d-none">
+                <div class="input-group inp-form-4 fmi fms fmd mb-1 d-none">
                     <span class="input-group-text" id="identificacion"><i class="bi bi-card-text"></i></span>
                     <input type="text" id="identificacion" name="identificacion" class="form-control" minlength="5" maxlength="9" placeholder="Identificacion" 
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
-                <div class="input-group fmd mb-1 d-none">
+                <div class="input-group inp-form-5 fmd mb-1 d-none">
                     <span class="input-group-text" id="contrato"><i class="bi bi-file-earmark-medical"></i></span>
                     <input type="text" id="contrato" name="contrato" class="form-control" minlength="8" maxlength="12" placeholder="Contrato"
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
 
-                <div class="input-group fmd mb-1 d-none">
+                <div class="input-group inp-form-6 fmd mb-1 d-none">
                     <span class="input-group-text" id="direccion"><i class="bi bi-house-door"></i></span>
                     <input type="text" id="direccion" name="direccion" class="form-control" minlength="0" maxlength="40" placeholder="Direccion">
                 </div>
 
-                <div class="input-group fmd mb-1 d-none">
+                <div class="input-group inp-form-7 fmd mb-1 d-none">
                     <span class="input-group-text" id="telefono"><i class="bi bi-telephone"></i></span>
                     <input type="text" id="telefono" name="telefono" class="form-control" minlength="10" maxlength="13" placeholder="Telefono">
                 </div>
 
-                <div class="input-group fmi fms mb-1 d-none">
+                <div class="input-group inp-form-8 fmi fms mb-1 d-none">
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
                     <input type="text" class="form-control e-insta" id="equipoi" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-primary b-mas" onclick="agregarInput()">+</button>
                 </div>
 
-                <!-- equipos adicionales -->
-                <div class="input-group inpi inp-2 mb-1 d-none">
+                <!-- equipos adicionales de instalacion NO visibles-->
+                <div class="input-group inp-2 mb-1 d-none">
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
                     <input type="text" class="form-control e-insta" id="equipoi2" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(2)">-</button>
                 </div>
 
-                <div class="input-group inpi inp-3 mb-1 d-none">
+                <div class="input-group inp-3 mb-1 d-none">
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
                     <input type="text" class="form-control e-insta" id="equipoi3" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(3)">-</button>
                 </div>
 
-                <div class="input-group inpi inp-4 mb-1 d-none">
+                <div class="input-group inp-4 mb-1 d-none">
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
                     <input type="text" class="form-control e-insta" id="equipoi4" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(4)">-</button>
                 </div>
 
-                <div class="input-group inpi inp-5 mb-1 d-none">
+                <div class="input-group inp-5 mb-1 d-none">
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
                     <input type="text" class="form-control e-insta" id="equipoi5" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(5)">-</button>
                 </div>
+                <!-- fin de equipos adicionales -->
 
-                <!-- fin de equipos adicionales de instalaciones -->
-
-                <div class="input-group fms mb-1 d-none">
+                <div class="input-group inp-form-9 fms mb-1 d-none">
                     <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
                     <input type="text" class="form-control e-recup" id="equipor" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
-                    <button type="button" class="btn btn-primary b-mas">+</button>
+                    <button type="button" class="btn btn-primary b-mas" onclick="agregarInputR()">+</button>
                 </div>
 
+                <!-- equipos adicionales de recupero NO visibles-->
+                <div class="input-group inp-6 mb-1 d-none">
+                    <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
+                    <input type="text" class="form-control e-recup" id="equipor6" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-mas" onclick="quitarInput(6)">-</button>
+                </div>
 
+                <div class="input-group inp-7 mb-1 d-none">
+                    <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
+                    <input type="text" class="form-control e-recup" id="equipor7" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-mas" onclick="quitarInput(7)">-</button>
+                </div>
 
-                <div class="input-group fmd mb-1 d-none">
+                <div class="input-group inp-8 mb-1 d-none">
+                    <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
+                    <input type="text" class="form-control e-recup" id="equipor8" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-mas" onclick="quitarInput(8)">-</button>
+                </div>
+
+                <div class="input-group inp-9 mb-1 d-none">
+                    <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
+                    <input type="text" class="form-control e-recup" id="equipor9" name="equipor" minlength="9" maxlength="18" placeholder="Equipo Recuperado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-mas" onclick="quitarInput(9)">-</button>
+                </div>
+                <!-- fin de equipos adicionales -->
+
+                <div class="input-group inp-form-10 fmd mb-1 d-none">
                     <span class="input-group-text" id="comentario"><i class="bi bi-chat-left-dots"></i></span>
                     <input type="text" id="comentario" name="comentario" class="form-control" minlength="0" maxlength="250" placeholder="Comentario">
                 </div>
