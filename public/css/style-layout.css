@@ -30,6 +30,10 @@ margin{
     display: inline-block;
 }
 
+.b-menos{
+    display: inline-block;
+}
+
 /*ajustes de tabla*/
 .dato-oc{
     visibility: collapse;

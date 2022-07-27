@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#miTablet').DataTable({
         "lengthMenu": [ 15, 20, 50, 75, 100 ],
-        "order": [0,'desc'],
+        "order": [ 0, 'desc' ],
         language: {
             processing: "Procesando...",
             search: "Buscar :",

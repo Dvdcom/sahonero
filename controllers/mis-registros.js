@@ -3,7 +3,7 @@ const connection = require('../db');
 const resultsPerPage = 20;
 
 module.exports.index = (req, res) => {
-    let sql = 'SELECT * FROM registros';
+    let sql = 'SELECT * FROM registros ORDER BY fecha DESC';
     connection.query(sql, (error, result) => {
             res.render('mis-registros/index',{registros: result,layout: './layouts/layout-datatablet'});
         });

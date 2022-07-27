@@ -7,13 +7,14 @@
         <div class="col-10 col-sm-4 col-md-5 col-lg-4 col-xl-3">
             
             <form action="/form-registros/store" method="post">
+                <label class="form-label">Seleccione el tipo de registro a crear:</label>
                 <div class="input-group mb-2">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo:</label>
-                    <select class="form-select" id="inputGroupSelect01" name="inputGroupSelect01">
-                        <option value="" selected></option>
-                        <option value="Instalacion">Instalacion</option>
-                        <option value="Service">Service</option>
-                        <option value="Solicitar datos">Solicitar datos</option>
+                    <select class="form-select" id="inputGroupSelect01" name="inputGroupSelect01" onchange="MostrarOcultarInputs();">
+                        <option value=""></option>
+                        <option value="Instalacion" <%= values.inputGroupSelect01 == 'Instalacion' ? 'selected' : '' %>>Instalacion</option>
+                        <option value="Service" <%= values.inputGroupSelect01 == 'Service' ? 'selected' : '' %>>Service</option>
+                        <option value="Solicitar datos" <%= values.inputGroupSelect01 == 'Solicitar datos' ? 'selected' : '' %>>Solicitar datos</option>
                     </select>
                 </div>
 
@@ -61,8 +62,39 @@
                     <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
                     <input type="text" class="form-control e-insta" id="equipoi" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
-                    <button type="button" class="btn btn-primary b-mas">+</button>
+                    <button type="button" class="btn btn-primary b-mas" onclick="agregarInput()">+</button>
                 </div>
+
+                <!-- equipos adicionales -->
+                <div class="input-group inpi inp-2 mb-1 d-none">
+                    <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
+                    <input type="text" class="form-control e-insta" id="equipoi2" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(2)">-</button>
+                </div>
+
+                <div class="input-group inpi inp-3 mb-1 d-none">
+                    <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
+                    <input type="text" class="form-control e-insta" id="equipoi3" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(3)">-</button>
+                </div>
+
+                <div class="input-group inpi inp-4 mb-1 d-none">
+                    <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
+                    <input type="text" class="form-control e-insta" id="equipoi4" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(4)">-</button>
+                </div>
+
+                <div class="input-group inpi inp-5 mb-1 d-none">
+                    <span class="input-group-text e-insta" id="equipoi"><i class="bi bi-router"></i></span>
+                    <input type="text" class="form-control e-insta" id="equipoi5" name="equipoi" minlength="9" maxlength="18" placeholder="Equipo Instalado"
+                        aria-label="basic-addon1" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-danger b-menos" onclick="quitarInput(5)">-</button>
+                </div>
+
+                <!-- fin de equipos adicionales de instalaciones -->
 
                 <div class="input-group fms mb-1 d-none">
                     <span class="input-group-text e-recup" id="equipor"><i class="bi bi-router-fill"></i></span>
@@ -70,6 +102,8 @@
                         aria-label="basic-addon1" aria-describedby="basic-addon1">
                     <button type="button" class="btn btn-primary b-mas">+</button>
                 </div>
+
+
 
                 <div class="input-group fmd mb-1 d-none">
                     <span class="input-group-text" id="comentario"><i class="bi bi-chat-left-dots"></i></span>
@@ -93,4 +127,4 @@
         </div>
     </div>
 </div>
-<script src="/js/script.js"></script>
+<script src="/js/fregistros.js"></script>
