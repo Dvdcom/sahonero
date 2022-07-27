@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
 });
 
 function MostrarOcultarInputs(){
-    for (var i = 1; i < 11; i++){
+    for (var i = 1; i < 13; i++){
         let inp = ".inp-form-" + i
         let inputsGroup = document.querySelector(inp);
 
@@ -70,9 +70,13 @@ function agregarInputR(){
 }
 
 function quitarInput(x){
-    let inp = ".inp-" + x
-    const inputsGroup = document.querySelector(inp);
+    let inp = ".inp-" + x;
+    let equi = "#equipoi" + x;
+    let inputsGroup = document.querySelector(inp);
+    let equipoi = document.querySelector(equi);
+    equipoi.value = "";
     inputsGroup.classList.add('d-none');
+    
 }
 
 

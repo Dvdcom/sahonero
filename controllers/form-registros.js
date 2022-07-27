@@ -19,7 +19,15 @@ module.exports.store = (req, res) => {
             direccion: req.body.direccion.toUpperCase(),
             telefono: req.body.telefono,
             equipoi: req.body.equipoi.toUpperCase(),
+            equipoi2: req.body.equipoi2.toUpperCase(),
+            equipoi3: req.body.equipoi3.toUpperCase(),
+            equipoi4: req.body.equipoi4.toUpperCase(),
+            equipoi5: req.body.equipoi5.toUpperCase(),
             equipor: req.body.equipor.toUpperCase(),
+            equipor6: req.body.equipor6.toUpperCase(),
+            equipor7: req.body.equipor7.toUpperCase(),
+            equipor8: req.body.equipor8.toUpperCase(),
+            equipor9: req.body.equipor9.toUpperCase(),
             comentario: req.body.comentario.toUpperCase()
         },
         (error, results) =>{
