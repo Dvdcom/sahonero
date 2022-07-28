@@ -71,7 +71,12 @@ function agregarInputR(){
 
 function quitarInput(x){
     let inp = ".inp-" + x;
-    let equi = "#equipoi" + x;
+    let equi = "";
+    if(x <= 5){
+        equi = "#equipoi" + x;
+    }else{
+        equi = "#equipor" + x;
+    }
     let inputsGroup = document.querySelector(inp);
     let equipoi = document.querySelector(equi);
     equipoi.value = "";
