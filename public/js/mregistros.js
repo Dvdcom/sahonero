@@ -1,8 +1,13 @@
 $(document).ready(function () {
     $('#miTablet').DataTable({
-        "lengthMenu": [ 15, 20, 50, 75, 100 ],
+        "lengthMenu": [15,20,30,50],
         "order": [ 0, 'desc' ],
         language: {
+            buttons: {
+                pageLength: {
+                    '_': "Mostrar %d Registros",
+                }
+            },
             processing: "Procesando...",
             search: "Buscar :",
             lengthMenu: "Mostrar _MENU_ entradas",
@@ -19,12 +24,46 @@ $(document).ready(function () {
                         previous: "Anterior"
                     },
             aria: {
-                sortAscending: ": activer pour trier la colonne par ordre croissant",
-                sortDescending: ": activer pour trier la colonne par ordre décroissant"
+                sortAscending: ": orden ascendente",
+                sortDescending: ": orden descendente"
             }
-        }
+        },
+        responsive: "true",
+        dom: "<'row'<'col-sm-12 col-md-6'B><'col-sm-12 col-md-6'f>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+        buttons: [
+            {
+                extend: 'pageLength',
+                text: 'Mas Registros',
+                titleAttr: 'Mostrar Registros',
+                className: 'btn btn-sm btn-info'
+            },
+            {
+                extend: 'copy',
+                text: '<i class="bi bi-clipboard-check"></i>',
+                titleAttr: 'Copiar a Portapapeles',
+                className: 'btn btn-sm btn-secondary'
+            },
+            {
+                extend: 'excel',
+                text: '<i class="bi bi-filetype-xlsx"></i>',
+                titleAttr: 'Exportar a Excel',
+                className: 'btn btn-sm btn-success'
+            }
+        ]
     });
+});
 
+$(window).on('resize', function () {
+    var win = $(this);
+    if (win.width() < 750) {
+        $('.dt-buttons').addClass('d-none');
+        $('.dataTables_info').addClass('d-none');
+    } else {
+        $('.dt-buttons').removeClass('d-none');
+        $('.dataTables_info').removeClass('d-none');
+    }
 });
 
 selRegistro = function(id,tipo,nombre,apellido,equipoi,equipor,comentario){

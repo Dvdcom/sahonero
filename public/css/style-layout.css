@@ -40,6 +40,11 @@ margin{
     display: none;
 }
 
+.equipo-oc{
+    visibility: collapse;
+    display: none;
+}
+
 table{
     font-size: small;
 }
